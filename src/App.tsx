@@ -25,7 +25,10 @@ const App = () => {
           <C.First>
             <C.Button>
               <button onClick={() => change()}>
-              😊 
+                <img 
+                  src="/assets/happy.png"
+                  alt="arrow"
+                />
                 <img 
                   src="/assets/icons/arrow.png"
                   alt="arrow"
@@ -41,8 +44,12 @@ const App = () => {
           : null}
           {showPoem ?
           <C.Poem>
-            <C.Desc>A neighbour of mine gave me an idea of writing a poem. I tried. <span id="monkey">🙈</span> </C.Desc>
-            <p id='poem'>
+            <C.Desc>A neighbour of mine gave me an idea of writing a poem. I tried.</C.Desc>
+            <img
+                id='monkey'
+                src="/assets/monkey.png"
+            />
+            <div id='poem'>
               Tienes una gran sonrisa y pestañas largas,<br></br> 
               el pelo rizado y alocado,<br></br> 
               los veinte dedos que me dan carne de pollo.<br></br> 
@@ -50,8 +57,8 @@ const App = () => {
               Haces bromas tanto buenas como malas pero que siempre alegran mi día.
               Ha sido un año muy lindo a tu lado y espero tener muchos más<br></br> 
               porque te quiero mucho, Alekkusu-san!
-            </p>
-            <p id='sign'>-Anni</p>
+              <p id='sign'>- Anni</p>
+            </div>
             <img
                 id='sydan'
                 src="/assets/sydan.png"

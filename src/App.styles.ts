@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    min-height:100vh;
+    min-height:110vh;
     background-image: url('/assets/tiles.jpeg');
     background-position:center;
     background-size:cover;
@@ -95,9 +95,13 @@ export const Poem = styled.div`
     width: 500px;
     text-align: center;
     position: relative;
+    margin-bottom: 200px;
 
     #monkey {
-        font-size: 2em;
+        position: absolute;
+        top: -20%;
+        left: 100%;
+        width: 80px;
     }
 
     #poem {
@@ -109,17 +113,15 @@ export const Poem = styled.div`
     }
 
     #sign {
-        position:absolute;
-        top: 360%;
-        left: 60%;
         font-family: 'Sacramento', cursive;
         font-size: 3em;
+        margin-left: 15%;
     }
 
-    img {
+    #sydan { 
         position: absolute;
-        top: 280%;
-        left: 88%;
+        top: 470%;
+        left: 10%;
         width: 100px;
     }
     
