@@ -1,64 +1,63 @@
 import * as C from './App.styles';
+import React, { useState } from 'react';
 
 const App = () => {
+
+  const [showPoem, setShowPoem] = React.useState(false)
+  const [showFirst, setShowFirst] = React.useState(true)
+
+  function change() {
+    setShowPoem(true);
+    setShowFirst(false);
+  }
+
   return (
     <C.Container>
       <C.Area>
         <C.Menu>
-          <div className="logo">
-            <img
-              src="/assets/logo/logo01.png"
-              alt="logo"
-            />
-          </div>
-          <div className="menuItem">
-            <ul>
-              <li><span className='active'>Home</span></li>
-              <li><span>Products</span></li>
-              <li><span>Services</span></li>
-              <li><span>Pricing</span></li>
-            </ul>
-          </div>
-          <div className="menuOptions">
-            <div className="menuOptionsItem">
-              <img
-                src="/assets/icons/search.png"
-                alt="search"
-              />
-            </div>
-            <div className="menuOptionsItem">
-              <img
-                src="/assets/icons/shopping-cart.png"
-                alt="shopping-cart"
-              />
-            </div>
-            <div className="menuOptionsItem">
-              <a
-                href="https://github.com/iamdevmarcos/"
-                target="_blank"
-              >
-                <img
-                  className="avatar"
-                  src="/assets/icons/profile.png"
-                  alt="Hey, I'm Marcos"
-                />
-              </a>
-            </div>
-          </div>
+          
         </C.Menu>
 
         <C.Body>
-          <C.Title>Be Minimalism.</C.Title>
-          <C.Desc>Get many aesthetic and unique furnitures for your room.</C.Desc>
-          <C.Button>
-            <button>
-              Discover
-              <img 
-                src="/assets/icons/arrow.png"
-                alt="arrow"
-              />
-            </button>
-          </C.Button>
+          <C.Title>Hey Alekkusu!</C.Title>
+          <C.Desc>We have been together a whole year and I wanted to write you something.</C.Desc>
+          {showFirst ?
+          <C.First>
+            <C.Button>
+              <button onClick={() => change()}>
+              😊 
+                <img 
+                  src="/assets/icons/arrow.png"
+                  alt="arrow"
+                />
+              </button>
+
+            </C.Button>
+            <img 
+                id='anni'
+                src="/assets/anni.jpeg"
+            />
+          </C.First>
+          : null}
+          {showPoem ?
+          <C.Poem>
+            <C.Desc>A neighbour of mine gave me an idea of writing a poem. I tried. <span id="monkey">🙈</span> </C.Desc>
+            <p id='poem'>
+              Tienes una gran sonrisa y pestañas largas,<br></br> 
+              el pelo rizado y alocado,<br></br> 
+              los veinte dedos que me dan carne de pollo.<br></br> 
+              Eres un chico muy guapo pero además el más tuanis.<br></br> 
+              Haces bromas tanto buenas como malas pero que siempre alegran mi día.
+              Ha sido un año muy lindo a tu lado y espero tener muchos más<br></br> 
+              porque te quiero mucho, Alekkusu-san!
+            </p>
+            <p id='sign'>-Anni</p>
+            <img
+                id='sydan'
+                src="/assets/sydan.png"
+            />
+          </C.Poem>
+          : null}
         </C.Body>
       </C.Area>
     </C.Container>
